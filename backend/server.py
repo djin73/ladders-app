@@ -15,6 +15,7 @@ def get_people_data():
     }
 
 
+# save matches to txt file
 @app.route("/save-matches-txt", methods=["POST"])
 def save_to_txt():
     print(request.json["matches"])
@@ -25,6 +26,7 @@ def save_to_txt():
         return {"success": False}
 
 
+# generate new matching using solve()
 @app.route("/generate-matching", methods=["POST"])
 def generate_matching():
     try:
@@ -39,6 +41,7 @@ def generate_matching():
         return {"final_pairings": [], "final_penalties": {}, "sol_found": False}
 
 
+# helper method that takes people data and makes it readable
 def get_legible_data(matcher):
     gender_key = {-1: "N/A", 0: "M", 1: "F"}
     year_key = {1: "Freshman", 2: "Sophomore", 3: "Junior", 4: "Senior"}
