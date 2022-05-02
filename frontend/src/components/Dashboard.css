@@ -1,0 +1,23 @@
+.container {
+    padding: 24px;
+    font-family: Roboto, sans-serif;
+}
+
+.matching {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.header {
+    margin-bottom: 32px;
+}
+
+.smallHeader {
+    margin-bottom: 16px;
+}
+
+.matchingCard {
+    margin: 32px auto;
+    width: 80%;
+}
