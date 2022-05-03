@@ -2,7 +2,8 @@
 
 ## Overview
 
-Welcome to our CIS 189 final project! An overview of what we have completed. TODO: EDIT THIS-------------------
+Welcome to our CIS 189 final project! We've utilized a CP solver to create ladders, an automatic matching web app that pairs people up for meet ups based on their preferences efficiently. It saves people's preferences as well as previous pairings, and when matching provides a dashboard to analyze which preferences weren't met.
+NOTE: Originally we planned to have a log in feature to edit preferences, but unfortunately we decided it required a significant of additional complexity and its functionality has been removed.
 
 ## File Structure
 
@@ -12,9 +13,7 @@ The `backend` folder contains the code that produces the matches and runs the se
 
 ### Frontend
 
-The `frontend` folder contains all the code for the React app behind the frontend for our project. Outside of the boilerplate, all of our pages/components are contained in the `components` folder. For example, `Dashboard.js` contains all the code for the `/dashboard` page.
-
-TODO ADD TO THIS-----------------
+The `frontend` folder contains all the code for the React app behind the frontend for our project. Outside of the boilerplate, all of our pages/components are contained in the `components` folder. For example, `Dashboard.js` contains all the code for the `/dashboard` page. Other pages include Home and Account which use other components like singup and textfield. It also contains various .css files for different styles.
 
 ## Running our App
 

@@ -61,10 +61,9 @@ export default function HomePage() {
             </div> */}
             
             <div style={{ display: 'flex', flexDirection:'column', alignContent: 'center', marginTop: '5%', width: '40%', paddingBottom: '5%'}}>
-                <Signup style={{}} setName={setName} setID={setID} setSubmit={setSubmit}/>
-                <div style={{ display: 'flex', flexDirection: 'row' }}>
-                    <h5 style={{ marginTop: '1%', padding: 0}}>or </h5>
-                    <div id='panel' onClick={handleNewAccount} style={{ display: 'flex', flexDirection: 'row' }}><h5 style={{ marginTop: '1%', padding: 5, borderRadius: 5, textDecorationLine: 'underline'}}>create new account</h5></div>
+                {/* <Signup style={{}} setName={setName} setID={setID} setSubmit={setSubmit}/> */}
+                <div style={{ display: 'flex', flexDirection: 'row', alignSelf: 'center'}}>
+                    <div id='panel' onClick={handleNewAccount} style={{ display: 'flex', flexDirection: 'row', marginTop: '0.4%'}}><h2 style={{ marginTop: '1%', padding: 5, borderRadius: 5, textDecorationLine: 'underline'}}>create new account</h2></div>
                 </div>
             </div>
             

@@ -29,9 +29,9 @@ export const Signup = (props) => {
                 <div>
                     {/* <h1 className="my-4 font-weight-bold .display-4">Sign In</h1> */}
                     <Form>
-                        <TextField label="First Name" name="firstName" type="text" />
+                        <TextField label="Name" name="firstName" type="text" />
                         <TextField label="Penn ID" name="pennID" type="text" />
-                        <button className="btn btn-success mt-3" type="submit">Log In!</button>
+                        <button className="btn btn-primary mt-3" type="submit">Log In!</button>
                     </Form>
                 </div>
             )}

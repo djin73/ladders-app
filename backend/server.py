@@ -14,6 +14,27 @@ def get_people_data():
         "prev_pairings": matcher.prev_pairings,
     }
 
+# writes new account data to txt file
+@app.route("/write-account", methods=["POST"])
+def write_account():
+    print('in write account')
+    print(request.json)
+    name = request.json['name']
+    id = request.json['id']
+    gender = request.json['gender']
+    year = request.json['year']
+    major = request.json['major']
+    cg = request.json['cg']
+    genderPref = request.json['genderPref']
+    yearPref = request.json['yearPref']
+    notPeoplePref = request.json['notPeoplePref']
+    timePref = request.json['timePref']
+    
+    with open("people.txt", "a") as file:
+        file.write(f"\n{name}; {id}; {gender}; {year}; {major}; {cg}; {genderPref}; {yearPref}; {notPeoplePref}; {timePref}")
+        file.close()
+    return {"success": True}
+
 
 # save matches to txt file
 @app.route("/save-matches-txt", methods=["POST"])
