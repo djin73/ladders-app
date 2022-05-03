@@ -158,7 +158,7 @@ class LaddersMatcher:
             model.AddElement(partner_of[i], self.year, self.year_of_partner_of[i])
             model.AddLinearExpressionInDomain(
                 self.year_of_partner_of[i],
-                cp_model.Domain.FromValues(self.year_pref[i]),
+                cp_model.Domain.FromValues(list(self.year_pref[i])),
             ).OnlyEnforceIf(self.year_pref_violated[i].Not())
         self.year_penalty = model.NewIntVar(0, n_people, "year penalty")
         model.Add(self.year_penalty == sum(self.year_pref_violated))
@@ -186,11 +186,11 @@ class LaddersMatcher:
             model.NewBoolVar(f"partner preferences of {names[i]}({i}) violated")
             for i in range(n_people)
         ]
-        for i in range(n_people):  # TODO is this inefficient? not sure
+        for i in range(n_people):
             model.AddLinearExpressionInDomain(
                 partner_of[i],
                 cp_model.Domain.FromValues(
-                    set(range(n_people)) - self.pref_not_partners[i]
+                    list(set(range(n_people)) - self.pref_not_partners[i])
                 ),
             ).OnlyEnforceIf(self.pairing_pref_violated[i].Not())
         self.pairing_penalty = model.NewIntVar(0, n_people, "pairing penalty")
